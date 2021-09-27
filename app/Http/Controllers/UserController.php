@@ -62,6 +62,7 @@ class UserController extends Controller
             @unlink(public_path($user->image));
         }
         $user->delete();
+        return $this->successMessage(200, 'success', 'Success delete user');
     }
 
     // Return All Message Condition
